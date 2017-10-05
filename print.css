@@ -1,0 +1,52 @@
+#con{
+	/* border:1px solid black; */
+	background-color:lightgreen;
+	height: 600px;
+	width:800px;
+	position:absolute;
+	left:0;right:0;top: 0px;bottom: 0px;
+	/*使div盒模型绝对居中？？？*/
+	margin:auto;
+	/*与前面的position配合使盒模型绝对居中（水平垂直）*/
+	/* box-shadow:0 0 30px 10px black; */
+	/*盒子阴影*/
+}
+span{
+	border:1px solid orange;
+	/*color: pink;*/
+	background:pink;
+	color:#666;
+	height: 50px;
+	width:50px;
+	display: block;
+	font-size: 30px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 25px;
+	/* text-shadow: 0 0 20px  black; */
+	position:absolute;
+	top:0px;
+	box-sizing: border-box;
+	/*使其整个盒模型固定不变，即使有外边距啥的也往内容里面挤*/
+}
+span.dh{
+	/*动画名字*/
+	animation-name:dh;
+	/*动画持续时间*/
+	animation-duration:0.5s;
+	/*动画结束后保持什么状态，forwards表示保持结束状态*/
+	animation-fill-mode: forwards;
+	/*动画执行时间的快慢速度（先快后慢，先慢后快 匀速等等情况），linear表示匀速变化*/
+	animation-timing-function:linear;
+}
+/*创建动画*/
+@keyframes dh{
+	from{
+		opacity: 1;
+		transform: scale(1) rotate(0deg);
+	}
+	/*transform转变，scale放大 rotate旋转 opacity透明度*/
+	to{
+		opacity: 0;
+		transform: scale(2) rotate(180deg);}
+}
